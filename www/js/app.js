@@ -48,7 +48,7 @@ angular.module('starter', ['ionic', "firebase"])
   // Updates item to Items array and Firebase
   $scope.purchaseItem = function(item) {
     //$scope.item = item;
-    var itemsRef = new Firebase("https://blistering-fire-4944.firebaseio.com/items/"/ + item.$id);
+    var itemsRef = new Firebase("https://blistering-fire-4944.firebaseio.com/items/" + item.$id);
     //$scope.item['status'] = 'purchased';
     itemsRef.child('status').set('purchased');
     $ionicListDelegate.closeOptionButtons();
