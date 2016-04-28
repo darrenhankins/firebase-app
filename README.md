@@ -121,9 +121,9 @@ Now we can create our `ListCtrl` and inject our `Items` factory as a dependency:
 
   // Updates item to Items array and Firebase
   $scope.purchaseItem = function(item) {
-    //$scope.item = item;
-    var itemsRef = new Firebase("https://<YOUR-FIREBASE-APP>.firebaseio.com/items/"/ + item.$id);
-    //$scope.item['status'] = 'purchased';
+
+    var itemsRef = new Firebase("https://<YOUR-FIREBASE-APP>.firebaseio.com/items/" + item.$id);
+
     itemsRef.child('status').set('purchased');
     $ionicListDelegate.closeOptionButtons();
   };
